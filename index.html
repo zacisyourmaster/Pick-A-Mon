@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Pokemon Selector</title>
+</head>
+
+<body class="bg-neutral-800 text-white">
+  <header class="text-center m-5 mb-10">
+    <h1 class="text-5xl"><span class="text-red-700">Pick</span>-a-Mon!<h1>
+        <p> Search a Pokémon by name or id and get some cool data!</p>
+  </header>
+  <main class="bg-zinc-500 w-5/11 border rounded-lg m-auto p-3 font-[Arial] mb-10">
+    <form id="poke-search" class="pb-2">
+      <label for="pname" class="text-xl font-bold block mb-1">Enter a Pokémon name or #:</label>
+      <div class="flex gap-2">
+        <input class="bg-white rounded-sm flex-1 text-black px-1" type="text" id="pname" name="pname"
+          placeholder="(e.g, Charizard, 394)">
+        <input type="submit" value="Search!"
+          class="bg-red-400 rounded-sm p-1 font-semibold cursor-pointer hover:bg-red-900">
+      </div>
+    </form>
+    <hr />
+    <div id='poke-card' class="text-center p-3">
+      <h2 class="text-4xl font-bold capitalize" id="poke-title">Lucario</h2>
+      <img src='https://img.pokemondb.net/artwork/avif/lucario.avif'
+        class='w-2/3 mx-auto border-2 border-black rounded-lg' id="poke-pic" alt="default" />
+      <div>
+        <p class="text-3xl font-medium m-5">Pokédex Data</p>
+        <hr class='m-5'>
+        <table class='w-full text-left'>
+          <tbody id='poke-bio-table'>
+            <tr>
+              <th>Number</th>
+              <td>0448</td>
+            </tr>
+            <tr>
+              <th>Type</th>
+              <td>
+                <span class="font-bold">Steel</span> <span class="font-bold">Fighting</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Height</th>
+              <td>1.2 m (3′11″)</td>
+            </tr>
+            <tr>
+              <th>Weight</th>
+              <td>54.0 kg (119.0 lbs)</td>
+            </tr>
+            <tr>
+              <th>Abilities</th>
+              <td>
+                <ul>
+                  <li>Steadfast</li>
+                  <li>Inner Focus</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr class="m-5">
+        <div id="moves-list">
+          <h3 class="text-2xl font-semibold mb-3 text-red-400">Move list</h3>
+          <table class="w-full border-collapse rounded-sm">
+            <thead class="bg-zinc-600">
+              <tr>
+                <th class="p-2 text-left border-b border-zinc-500">Lv.</th>
+                <th class="p-2 text-left border-b border-zinc-500">Move</th>
+                <!--
+                <th class="p-2 text-left border-b border-zinc-500">Type</th>
+                <th class="p-2 text-left border-b border-zinc-500">Cat.</th>
+                <th class="p-2 text-left border-b border-zinc-500">Power</th>
+                <th class="p-2 text-left border-b border-zinc-500">Acc.</th>
+                 -->
+                <th class="p-2 text-left border-b border-zinc-500">URL</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-700 bg-zinc-400 text-left" id='move-list'>
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">Aura Sphere</td>
+                <!--
+                <td class="p-2">Fighting</td>
+                <td class="p-2">SPEC</td>
+                <td class="p-2">80</td>
+                <td class="p-2">-</td>
+                  -->
+                <td><a href="https://pokemondb.net/move/aura-sphere" class="underline">Details</a></td>
+              <tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
